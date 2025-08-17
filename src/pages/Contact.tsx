@@ -2,10 +2,14 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { MessageCircle, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
+import { sendContactEmail } from "@/lib/supabase";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,10 +26,40 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendContactEmail(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -69,12 +103,12 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-business-text-light mb-6">
-            Contact <span className="text-business-blue">Us</span>
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-royal font-bold text-business-text-light mb-6 animate-slide-up">
+            Contact <span className="text-business-blue interactive-glow">Us</span>
           </h1>
-          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl text-business-text-light opacity-90 leading-relaxed">
+          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8 animate-scale-in"></div>
+          <p className="text-xl text-business-text-light opacity-90 leading-relaxed font-sans animate-slide-up" style={{animationDelay: '0.3s'}}>
             Better yet, see us in person! We love our customers, so feel free to visit anytime.
           </p>
         </div>
@@ -85,10 +119,10 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="shadow-card">
+            <Card className="shadow-card hover-lift animate-fade-in">
               <CardHeader>
-                <h2 className="text-3xl font-bold text-business-navy">Get In Touch</h2>
-                <p className="text-gray-600">
+                <h2 className="text-3xl font-royal font-bold text-business-navy">Get In Touch</h2>
+                <p className="text-gray-600 font-sans">
                   Ready to transform your business? Let's start the conversation.
                 </p>
               </CardHeader>
@@ -202,27 +236,32 @@ const Contact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-business-blue hover:bg-business-blue/90 text-business-text-light py-6 text-lg font-semibold"
+                    disabled={isSubmitting}
+                    className="w-full bg-business-blue hover:bg-business-blue/90 text-business-text-light py-6 text-lg font-semibold hover-lift interactive-glow disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <Send className="ml-2 h-5 w-5" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <Send className={`ml-2 h-5 w-5 ${isSubmitting ? 'animate-pulse' : ''}`} />
                   </Button>
                 </form>
               </CardContent>
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+                  <Card 
+                    key={index} 
+                    className="shadow-card hover:shadow-elegant hover-lift transition-all duration-300 animate-scale-in"
+                    style={{animationDelay: `${0.5 + index * 0.1}s`}}
+                  >
                     <CardContent className="p-6 text-center">
                       <div className="flex justify-center mb-4">
-                        <info.icon className="h-12 w-12 text-business-blue" />
+                        <info.icon className="h-12 w-12 text-business-blue transition-transform duration-300 hover:scale-110" />
                       </div>
-                      <h3 className="text-lg font-bold text-business-navy mb-2">{info.title}</h3>
-                      <p className="text-business-blue font-semibold mb-1">{info.content}</p>
-                      <p className="text-sm text-gray-600">{info.description}</p>
+                      <h3 className="text-lg font-royal font-bold text-business-navy mb-2">{info.title}</h3>
+                      <p className="text-business-blue font-semibold mb-1 font-sans">{info.content}</p>
+                      <p className="text-sm text-gray-600 font-sans">{info.description}</p>
                       {info.title === "WhatsApp" && (
                         <Button 
                           className="mt-4 bg-green-600 hover:bg-green-700 text-white"
