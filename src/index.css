@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 213 94% 68%;
+    --primary: 210 37% 25%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 213 94% 68%;
+    --accent: 210 37% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,15 +34,15 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 213 94% 68%;
+    --ring: 210 37% 25%;
 
     --radius: 0.75rem;
     
-    /* Custom business colors */
-    --business-navy: 213 47% 18%;
-    --business-blue: 213 94% 68%;
-    --business-light-blue: 213 84% 85%;
-    --business-dark: 213 67% 12%;
+    /* Custom business colors - Updated to #27435f theme */
+    --business-navy: 210 37% 25%;
+    --business-blue: 210 37% 35%;
+    --business-light-blue: 210 37% 85%;
+    --business-dark: 210 37% 15%;
     --business-text-light: 0 0% 100%;
     
     /* Gradients */
@@ -119,5 +119,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Crimson Text', serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
 }

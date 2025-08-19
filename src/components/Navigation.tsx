@@ -23,11 +23,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="text-2xl font-bold text-business-text-light">
-              <span className="text-business-blue">T</span>
-              <span className="text-business-text-light">N</span>
-            </div>
+          <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img 
+              src="/lovable-uploads/402109a1-b7c2-424d-9b16-4ebab82b44be.png" 
+              alt="TANIV Group Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,7 +38,8 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors font-crimson ${
                     isActive(item.path)
                       ? "bg-business-blue text-business-text-light"
                       : "text-business-text-light hover:bg-business-blue/20"
@@ -70,8 +72,11 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors font-crimson ${
                     isActive(item.path)
                       ? "bg-business-blue text-business-text-light"
                       : "text-business-text-light hover:bg-business-blue/20"
