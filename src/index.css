@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 37% 25%;
+    --primary: 210 50% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 37% 35%;
+    --accent: 210 50% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,13 +34,13 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 210 37% 25%;
+    --ring: 210 50% 45%;
 
     --radius: 0.75rem;
     
-    /* Custom business colors - Updated to #27435f theme */
+    /* Custom business colors - Updated for better contrast */
     --business-navy: 210 37% 25%;
-    --business-blue: 210 37% 35%;
+    --business-blue: 210 50% 45%;
     --business-light-blue: 210 37% 85%;
     --business-dark: 210 37% 15%;
     --business-text-light: 0 0% 100%;

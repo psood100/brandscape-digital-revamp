@@ -39,16 +39,16 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-business-text-light mb-6 leading-tight">
             Where Businesses Reach
             <br />
-            <span className="text-business-blue">Their Full Potential</span>
+            <span className="text-white">Their Full Potential</span>
           </h1>
           <p className="text-xl md:text-2xl text-business-text-light mb-8 opacity-90">
             Smart solutions, sharper strategies, stronger businesses.
           </p>
-          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
+          <div className="w-24 h-0.5 bg-white mx-auto mb-8"></div>
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold shadow-elegant"
+              className="bg-white text-business-navy hover:bg-white/90 hover:text-business-navy font-bold px-8 py-6 text-lg shadow-elegant transition-all duration-300"
             >
               GET IN TOUCH TODAY
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -66,8 +66,8 @@ const Home = () => {
                 <div className="flex justify-center mb-4">
                   <stat.icon className="h-12 w-12 text-business-blue" />
                 </div>
-                <div className="text-3xl font-bold text-business-navy mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-3xl font-bold text-business-navy mb-2 font-playfair">{stat.value}</div>
+                <div className="text-gray-700 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -78,19 +78,19 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-business-navy mb-4">OUR SERVICES</h2>
+            <h2 className="text-4xl font-bold text-business-navy mb-4 font-playfair">OUR SERVICES</h2>
             <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto font-medium">
               Comprehensive business solutions designed to drive growth and success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border-2 hover:border-business-blue/30">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-business-navy mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-business-navy mb-4 font-playfair">{service.title}</h3>
+                  <p className="text-gray-700 leading-relaxed font-medium">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -101,7 +101,7 @@ const Home = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-business-blue text-business-blue hover:bg-business-blue hover:text-white"
+                className="border-2 border-business-blue text-business-blue hover:bg-business-blue hover:text-white font-semibold transition-all duration-300"
               >
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -114,7 +114,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-section">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-business-text-light mb-6">
+          <h2 className="text-4xl font-bold text-business-text-light mb-6 font-playfair">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-business-text-light mb-8 opacity-90">
@@ -123,7 +123,7 @@ const Home = () => {
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold"
+              className="bg-white text-business-navy hover:bg-white/90 hover:text-business-navy font-bold px-8 py-6 text-lg transition-all duration-300"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5" />

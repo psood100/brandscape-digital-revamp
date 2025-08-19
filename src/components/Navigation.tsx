@@ -25,9 +25,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img 
-              src="/lovable-uploads/402109a1-b7c2-424d-9b16-4ebab82b44be.png" 
+              src="/lovable-uploads/ab7aac31-80e9-4d23-a35f-8773a90a9640.png" 
               alt="TANIV Group Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto brightness-0 invert"
             />
           </Link>
 
@@ -39,10 +39,10 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors font-crimson ${
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 font-crimson ${
                     isActive(item.path)
-                      ? "bg-business-blue text-business-text-light"
-                      : "text-business-text-light hover:bg-business-blue/20"
+                      ? "bg-white/20 text-white font-semibold backdrop-blur-sm"
+                      : "text-white/90 hover:bg-white/15 hover:text-white hover:font-semibold"
                   }`}
                 >
                   {item.name}
@@ -57,7 +57,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-business-text-light hover:bg-business-blue/20"
+              className="text-white hover:bg-white/15 hover:text-white transition-all duration-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -76,10 +76,10 @@ const Navigation = () => {
                     setIsOpen(false);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors font-crimson ${
+                  className={`block px-4 py-3 rounded-md text-base font-medium transition-all duration-300 font-crimson ${
                     isActive(item.path)
-                      ? "bg-business-blue text-business-text-light"
-                      : "text-business-text-light hover:bg-business-blue/20"
+                      ? "bg-white/20 text-white font-semibold"
+                      : "text-white/90 hover:bg-white/15 hover:text-white hover:font-semibold"
                   }`}
                 >
                   {item.name}
