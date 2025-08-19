@@ -38,11 +38,11 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    /* Custom business colors - Updated with #27435f theme */
-    --business-navy: 213 40% 27%;
-    --business-blue: 213 50% 45%;
-    --business-light-blue: 213 50% 75%;
-    --business-dark: 213 50% 20%;
+    /* Custom business colors */
+    --business-navy: 213 47% 18%;
+    --business-blue: 213 94% 68%;
+    --business-light-blue: 213 84% 85%;
+    --business-dark: 213 67% 12%;
     --business-text-light: 0 0% 100%;
     
     /* Gradients */
@@ -119,87 +119,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-  }
-  
-  /* Animations */
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
-  }
-  
-  .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  /* Hover animations */
-  .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-elegant);
-  }
-  
-  /* Interactive elements */
-  .interactive-glow {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .interactive-glow::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-  }
-  
-  .interactive-glow:hover::before {
-    left: 100%;
   }
 }

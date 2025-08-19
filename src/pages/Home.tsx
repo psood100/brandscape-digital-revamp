@@ -35,30 +35,23 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-business-blue/10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-32 right-20 w-32 h-32 bg-business-light-blue/10 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-business-blue/5 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-royal font-bold text-business-text-light mb-6 leading-tight animate-slide-up">
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-business-text-light mb-6 leading-tight">
             Where Businesses Reach
             <br />
-            <span className="text-business-blue interactive-glow">Their Full Potential</span>
+            <span className="text-business-blue">Their Full Potential</span>
           </h1>
-          <p className="text-xl md:text-2xl text-business-text-light mb-8 opacity-90 animate-slide-up font-sans" style={{animationDelay: '0.3s'}}>
+          <p className="text-xl md:text-2xl text-business-text-light mb-8 opacity-90">
             Smart solutions, sharper strategies, stronger businesses.
           </p>
-          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8 animate-scale-in" style={{animationDelay: '0.6s'}}></div>
+          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold shadow-elegant hover-lift interactive-glow animate-scale-in"
-              style={{animationDelay: '0.9s'}}
+              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold shadow-elegant"
             >
               GET IN TOUCH TODAY
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
         </div>
@@ -69,16 +62,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center hover-lift animate-fade-in"
-                style={{animationDelay: `${index * 0.2}s`}}
-              >
+              <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-business-blue transition-transform duration-300 hover:scale-110" />
+                  <stat.icon className="h-12 w-12 text-business-blue" />
                 </div>
-                <div className="text-3xl font-royal font-bold text-business-navy mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-sans">{stat.label}</div>
+                <div className="text-3xl font-bold text-business-navy mb-2">{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -88,24 +77,20 @@ const Home = () => {
       {/* Services Preview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl font-royal font-bold text-business-navy mb-4">OUR SERVICES</h2>
-            <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6 animate-scale-in"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-sans">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-business-navy mb-4">OUR SERVICES</h2>
+            <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Comprehensive business solutions designed to drive growth and success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="shadow-card hover:shadow-elegant hover-lift transition-all duration-300 animate-fade-in"
-                style={{animationDelay: `${index * 0.2}s`}}
-              >
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-royal font-bold text-business-navy mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed font-sans">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-business-navy mb-4">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
