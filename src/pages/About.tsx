@@ -28,20 +28,20 @@ const About = () => {
   const achievements = [
     { number: "500+", label: "Projects Completed" },
     { number: "150+", label: "Satisfied Clients" },
-    { number: "10+", label: "Years of Experience" },
+    { number: "25+", label: "Years of Experience" },
     { number: "25+", label: "Industry Sectors" }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-business-text-light mb-6">
-            About <span className="text-business-blue">TN Group</span>
+      <section className="relative py-24 bg-[#faebd7]">
+        <div className="max-w-4xl mx-auto text-center text-[#1C3049] px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-6xl font-bold text-[#1C3049] mb-6">
+            About <span className="">Taniv</span>
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl text-business-text-light opacity-90 leading-relaxed">
+          <p className="text-xl text-business-light opacity-90 leading-relaxed">
             Empowering businesses to reach their full potential through strategic consulting and innovative solutions
           </p>
         </div>
@@ -55,7 +55,7 @@ const About = () => {
               <h2 className="text-4xl font-bold text-business-navy mb-6">Our Story</h2>
               <div className="w-16 h-0.5 bg-business-blue mb-6"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded with a vision to transform the business landscape, TN Group has been at the forefront of 
+                Founded with a vision to transform the business landscape, Taniv has been at the forefront of 
                 providing comprehensive consulting services that drive growth and innovation.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -145,23 +145,23 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-20   bg-[#faebd7] text-[#1C3049]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-business-text-light mb-6">Why Choose TN Group?</h2>
+          <h2 className="text-4xl font-bold   mb-6">Why Choose Taniv?</h2>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-business-text-light">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8  ">
             <div>
-              <Award className="h-12 w-12 mx-auto mb-4 text-business-blue" />
+              <Award className="h-12 w-12 mx-auto mb-4 " />
               <h3 className="text-xl font-bold mb-4">Proven Expertise</h3>
               <p className="opacity-90">Years of experience delivering successful outcomes across diverse industries</p>
             </div>
             <div>
-              <Users className="h-12 w-12 mx-auto mb-4 text-business-blue" />
+              <Users className="h-12 w-12 mx-auto mb-4 " />
               <h3 className="text-xl font-bold mb-4">Client-Centric Approach</h3>
               <p className="opacity-90">Tailored solutions that address your unique challenges and objectives</p>
             </div>
             <div>
-              <TrendingUp className="h-12 w-12 mx-auto mb-4 text-business-blue" />
+              <TrendingUp className="h-12 w-12 mx-auto mb-4 " />
               <h3 className="text-xl font-bold mb-4">Measurable Results</h3>
               <p className="opacity-90">Data-driven strategies that deliver tangible business improvements</p>
             </div>

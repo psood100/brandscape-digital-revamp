@@ -10,8 +10,8 @@ const Home = () => {
       description: "End to end execution and management of commercial and technical projects, tailored to business goals and industry standards."
     },
     {
-      title: "Mergers & Acquisitions", 
-      description: "Comprehensive advisory on deal structuring, valuation, and integration to ensure successful M&A outcomes."
+      title: "Market Research", 
+      description: "Insight driven market research to support data-backed decisions, product positioning, and competitive analysis."
     },
     {
       title: "Export & Import",
@@ -26,7 +26,7 @@ const Home = () => {
   const stats = [
     { icon: Target, label: "Projects Completed", value: "500+" },
     { icon: Users, label: "Happy Clients", value: "150+" },
-    { icon: Award, label: "Years Experience", value: "10+" },
+    { icon: Award, label: "Years Experience", value: "25+" },
     { icon: TrendingUp, label: "Success Rate", value: "98%" }
   ];
 
@@ -42,7 +42,7 @@ const Home = () => {
             <span className="text-white">Their Full Potential</span>
           </h1>
           <p className="text-xl md:text-2xl text-business-text-light mb-8 opacity-90">
-            Smart solutions, sharper strategies, stronger businesses.
+            Turning Complexity into Clarity.
           </p>
           <div className="w-24 h-0.5 bg-white mx-auto mb-8"></div>
           <Link to="/contact">

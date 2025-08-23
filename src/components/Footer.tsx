@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import img from "../../public/lovable-uploads/ab7aac31-80e9-4d23-a35f-8773a90a9640.png";
 const Footer = () => {
   return (
     <footer className="bg-business-dark text-business-text-light">
@@ -11,22 +11,36 @@ const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center mb-4">
               <div className="text-2xl font-bold">
-                <span className="text-business-blue">T</span>
-                <span className="text-business-text-light">N</span>
+                {/* <span> {img} </span> */}
+                <img className="h-8 w-auto invert brightness-0" src={img} alt="logo"></img>
+                 
               </div>
             </div>
             <p className="text-sm text-gray-300 mb-4">
-              Smart solutions, sharper strategies, stronger businesses.
+            | Smart Solutions <br/>
+            | Sharper Strategies <br/>
+            | Stronger Businesses
             </p>
             <div className="flex space-x-4">
               <Button
                 variant="outline"
                 size="sm"
                 className="border-business-blue text-business-blue hover:bg-business-blue hover:text-white"
-                onClick={() => window.open("https://wa.me/917871555500", "_blank")}
+                onClick={() => window.open("https://wa.me/917874555000", "_blank")}
               >
                 <MessageCircle className="h-4 w-4 mr-2" />
                 WhatsApp
+              </Button>
+            </div>
+             <div className="flex space-x-4 mt-1">
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-business-blue text-business-blue hover:bg-business-blue hover:text-white"
+                onClick={() => window.open("https://www.linkedin.com/company/tanivgroup/", "_blank")}
+              >
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Linkedin
               </Button>
             </div>
           </div>
@@ -63,7 +77,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
               <li className="text-gray-300">Project Management</li>
-              <li className="text-gray-300">Mergers & Acquisitions</li>
+              <li className="text-gray-300">Market Research</li>
               <li className="text-gray-300">Export & Import</li>
               <li className="text-gray-300">Technical Services</li>
               <li className="text-gray-300">Business Development</li>
@@ -76,11 +90,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-business-blue" />
-                <span className="text-gray-300">+91 78771 555 00</span>
+                <span className="text-gray-300">+91 7874 555 000</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-business-blue" />
-                <span className="text-gray-300">ceo@tanixgroup.com</span>
+                <span className="text-gray-300">ceo@tanivgroup.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-business-blue flex-shrink-0" />
@@ -90,14 +104,14 @@ const Footer = () => {
             
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Business Hours</h4>
-              <p className="text-sm text-gray-300">Mon - Sat: 10:30 AM - 10:30 PM</p>
+              <p className="text-sm text-gray-300">Mon - Sun: 10:30 AM - 10:30 PM</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-300">
-            © 2024 TN Group. All rights reserved.
+            © 2025 Taniv Group. All rights reserved.
           </p>
         </div>
       </div>

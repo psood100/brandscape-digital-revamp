@@ -19,7 +19,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-business-navy/95 backdrop-blur-sm fixed w-full z-50 shadow-elegant">
+    <nav className="bg-[#1C3049] backdrop-blur-sm fixed w-full z-50 shadow-elegant">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -39,7 +39,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 font-crimson ${
+                  className={`px-4 py-2 rounded-md text-md font-medium transition-all duration-300 font-crimson ${
                     isActive(item.path)
                       ? "bg-white/20 text-white font-semibold backdrop-blur-sm"
                       : "text-white/90 hover:bg-white/15 hover:text-white hover:font-semibold"

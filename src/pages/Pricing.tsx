@@ -90,13 +90,13 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-business-text-light mb-6">
-            Pricing <span className="text-business-blue">Plans</span>
+      <section className="relative py-24 bg-[#faebd7]">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 text-[#1C3049]">
+          <h1 className="text-5xl md:text-6xl font-bold  mb-6">
+            Pricing <span className="">Plans</span>
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl text-business-text-light opacity-90 leading-relaxed">
+          <p className="text-xl  opacity-90 leading-relaxed">
             Flexible pricing options tailored to your business needs and growth stage
           </p>
         </div>
@@ -232,18 +232,18 @@ const Pricing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-20 bg-[#faebd7] text-[#1C3049]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-business-text-light mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-business-text-light mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90">
             Let's discuss the perfect plan for your business needs
           </p>
           <Link to="/contact">
             <Button 
               size="lg" 
-              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold"
+              className="bg-[#1c3049] hover:bg-[#1c3049]/85 text-business-text-light px-8 py-6 text-lg font-semibold"
             >
               Schedule Consultation
               <ArrowRight className="ml-2 h-5 w-5" />

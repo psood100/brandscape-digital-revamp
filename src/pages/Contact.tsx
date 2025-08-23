@@ -32,13 +32,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 78771 555 00",
+      content: "+91 7874 555 000",
       description: "Mon - Sat: 10:30 AM - 10:30 PM"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "ceo@tanixgroup.com",
+      content: "ceo@tanivgroup.com",
       description: "We'll respond within 24 hours"
     },
     {
@@ -62,19 +62,19 @@ const Contact = () => {
     { day: "Thursday", hours: "10:30 AM - 10:30 PM" },
     { day: "Friday", hours: "10:30 AM - 10:30 PM" },
     { day: "Saturday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Sunday", hours: "Closed" }
+    { day: "Sunday", hours: "10:30 AM - 10:30 PM" }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-business-text-light mb-6">
-            Contact <span className="text-business-blue">Us</span>
+      <section className="relative py-24 bg-[#faebd7]">
+        <div className="max-w-4xl mx-auto text-center text-[#1C3049] px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-6xl font-bold  mb-6">
+            Contact <span className="">Us</span>
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl text-business-text-light opacity-90 leading-relaxed">
+          <p className="text-xl  opacity-90 leading-relaxed">
             Better yet, see us in person! We love our customers, so feel free to visit anytime.
           </p>
         </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                       {info.title === "WhatsApp" && (
                         <Button 
                           className="mt-4 bg-green-600 hover:bg-green-700 text-white"
-                          onClick={() => window.open("https://wa.me/917871555500", "_blank")}
+                          onClick={() => window.open("https://wa.me/917874555000", "_blank")}
                         >
                           <MessageCircle className="mr-2 h-4 w-4" />
                           Chat Now
@@ -262,20 +262,20 @@ const Contact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-20   bg-[#faebd7] text-[#1C3049]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-business-text-light mb-6">
+          <h2 className="text-4xl font-bold   mb-6">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-xl text-business-text-light mb-8 opacity-90">
+          <p className="text-xl   mb-8 opacity-90">
             Don't wait - every day you delay is a day your competitors get ahead. 
             Let's discuss how we can accelerate your business growth today.
           </p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Button 
               size="lg" 
-              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
-              onClick={() => window.open("https://wa.me/917871555500", "_blank")}
+              className="bg-[#1c3049] hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+              onClick={() => window.open("https://wa.me/917874555000", "_blank")}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Us
@@ -283,8 +283,8 @@ const Contact = () => {
             <Button 
               variant="outline"
               size="lg" 
-              className="border-business-text-light text-business-text-light hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
-              onClick={() => window.open("tel:+917871555500", "_blank")}
+              className="border-business-text-light text-business-text-light-lite hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+              onClick={() => window.open("tel:+917874555000", "_blank")}
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Now

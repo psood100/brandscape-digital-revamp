@@ -77,13 +77,13 @@ const Team = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-business-text-light mb-6">
-            Our <span className="text-business-blue">Team</span>
+      <section className="relative py-24 bg-[#faebd7]">
+        <div className="max-w-4xl mx-auto text-center text-[#1C3049] px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-6xl font-bold   mb-6">
+            Our <span className=" ">Team</span>
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl text-business-text-light opacity-90 leading-relaxed">
+          <p className="text-xl   opacity-90 leading-relaxed">
             Meet the experts behind our success - a diverse team of professionals committed to your business growth
           </p>
         </div>
@@ -113,6 +113,7 @@ const Team = () => {
       </section>
 
       {/* Team Members */}
+      {/*
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -124,7 +125,7 @@ const Team = () => {
             {teamMembers.map((member, index) => (
               <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 group">
                 <CardContent className="p-8">
-                  {/* Profile Image Placeholder */}
+                  {/* Profile Image Placeholder 
                   <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-2xl font-bold text-business-text-light">
                       {member.name.split(' ').map(n => n[0]).join('')}
@@ -168,7 +169,7 @@ const Team = () => {
           </div>
         </div>
       </section>
-
+*/}
       {/* Company Culture */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,19 +230,19 @@ const Team = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-20 bg-[#faebd7] text-[#1C3049]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-business-text-light mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Work With Our Team?
           </h2>
-          <p className="text-xl text-business-text-light mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90">
             Let's discuss how our expertise can help drive your business forward
           </p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Link to="/contact">
               <Button 
                 size="lg" 
-                className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+                className="bg-[#1c0349] hover:bg-[#1c0349]/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
               >
                 Start a Project
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -250,7 +251,7 @@ const Team = () => {
             <Button 
               variant="outline"
               size="lg" 
-              className="border-business-text-light text-business-text-light hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+              className="border-business-text-light text-business-text-light-lite hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Us
