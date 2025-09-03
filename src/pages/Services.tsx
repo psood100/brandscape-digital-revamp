@@ -21,7 +21,7 @@ const Services = () => {
       icon: FolderOpen,
       title: "Projects",
       description: "End to end execution and management of commercial and technical projects, tailored to business goals and industry standards.",
-      features: ["Project Planning", "Resource Management", "Quality Assurance", "Timeline Optimization"]
+      features: ["Healthcare And Pharmaceutical Projects", "Concept to Commission", "Timeline Optimization"]
     },
      {
       icon: Search,
@@ -33,7 +33,7 @@ const Services = () => {
       icon: Ship,
       title: "Export & Import",
       description: "Expert guidance on global trade processes, compliance, and logistics to optimize cross-border business operations.",
-      features: ["Trade Documentation", "Customs Compliance", "Logistics Planning", "Market Entry Strategy"]
+      features: ["Sourcing Assistance", "Market Entry Strategy"]
     },
     {
       icon: Settings,
@@ -45,7 +45,7 @@ const Services = () => {
       icon: TrendingUp,
       title: "Business Development",
       description: "Strategic planning and support to identify new opportunities, enter new markets, and drive sustainable growth.",
-      features: ["Market Analysis", "Growth Strategy", "Partnership Development", "Revenue Optimization"]
+      features: ["New Market Penetration", "Collaborations", "Product Range and Diversification", "Revenue Optimization"]
     },
        {
       icon: Handshake,

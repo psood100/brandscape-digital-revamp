@@ -44,7 +44,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office",
-      content: "Gandhinagar, Gujarat, India",
+      content: "India , UAE , Africa",
       description: "Visit us for in-person consultations"
     },
     {
@@ -56,13 +56,13 @@ const Contact = () => {
   ];
 
   const businessHours = [
-    { day: "Monday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Tuesday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Wednesday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Thursday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Friday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Saturday", hours: "10:30 AM - 10:30 PM" },
-    { day: "Sunday", hours: "10:30 AM - 10:30 PM" }
+    { day: "Monday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Tuesday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Wednesday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Thursday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Friday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Saturday",hours:"Closed"},
+    { day: "Sunday", hours:"Closed"  }
   ];
 
   return (

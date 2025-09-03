@@ -25,8 +25,8 @@ const Home = () => {
 
   const stats = [
     { icon: Target, label: "Projects Completed", value: "500+" },
-    { icon: Users, label: "Happy Clients", value: "150+" },
-    { icon: Award, label: "Years Experience", value: "25+" },
+    { icon: Users, label: "Happy Clients", value: "250+" },
+    { icon: Award, label: "Years Experience", value: "40+" },
     { icon: TrendingUp, label: "Success Rate", value: "98%" }
   ];
 
