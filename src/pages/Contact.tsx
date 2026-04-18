@@ -24,8 +24,34 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    const recipient = "ceo@tanivgroup.com";
+    const subject = `New Inquiry from ${formData.name}${formData.company ? ` (${formData.company})` : ""}`;
+
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || "N/A"}`,
+      `Company: ${formData.company || "N/A"}`,
+      `Service Interest: ${formData.service || "N/A"}`,
+      ``,
+      `Message:`,
+      `${formData.message}`,
+    ];
+    const body = bodyLines.join("\n");
+
+    // Open Gmail compose in a new tab with all fields prefilled
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      recipient
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const gmailWindow = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+
+    // Fallback to default mail client if popup is blocked
+    if (!gmailWindow) {
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+    }
   };
 
   const contactInfo = [
