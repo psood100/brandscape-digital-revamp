@@ -28,10 +28,10 @@ const Home = () => {
   ];
 
   const stats = [
-    { icon: Award, label: "Years of Industry Experience", value: "35+" },
-    { icon: Target, label: "Pharma Heartland", value: "Gujarat's" },
-    { icon: TrendingUp, label: "Reach", value: "India & Global" },
-    { icon: Users, label: "Business Development", value: "Pharma · M&A · BD" }
+    { icon: Target, label: "Projects Completed", value: "500+" },
+    { icon: Users, label: "Happy Clients", value: "250+" },
+    { icon: Award, label: "Years Experience", value: "40+" },
+    { icon: TrendingUp, label: "Success Rate", value: "98%" }
   ];
 
   const whoWeWorkWith = [
