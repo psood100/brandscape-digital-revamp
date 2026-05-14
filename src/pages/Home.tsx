@@ -37,12 +37,12 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-business-text-light mb-6 leading-tight">
-            Where Businesses Reach
+            35 years of expertise.
             <br />
-            <span className="text-white">Their Full Potential</span>
+            <span className="text-white">Zero guesswork.</span>
           </h1>
           <p className="text-xl md:text-2xl text-business-text-light mb-8 opacity-90">
-            Turning Complexity into Clarity.
+            Taniv Group is a senior advisory firm for pharma companies, manufacturers, and business owners navigating market entry, M&A, and growth — from Gujarat, for the world
           </p>
           <div className="w-24 h-0.5 bg-white mx-auto mb-8"></div>
           <Link to="/contact">
