@@ -1,27 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Award, Users, TrendingUp, Globe } from "lucide-react";
+import { Target, Eye, Award, Users, TrendingUp, Globe, UserCheck, MessageSquare, Focus, CheckCircle, MapPin } from "lucide-react";
 
 const About = () => {
   const values = [
     {
-      icon: Target,
-      title: "Excellence",
-      description: "We strive for excellence in every project, delivering solutions that exceed expectations."
+      icon: UserCheck,
+      title: "Seniority",
+      description: "Every engagement is led by a principal with 35+ years of hands-on experience. We don't delegate your work to graduates."
     },
     {
-      icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and building strong partnerships with our clients."
+      icon: MessageSquare,
+      title: "Directness",
+      description: "We tell you what we actually think — including when the answer is not what you were hoping to hear. That's what you're paying for."
     },
     {
-      icon: TrendingUp,
-      title: "Innovation",
-      description: "We embrace cutting-edge technologies and innovative approaches to solve complex challenges."
+      icon: Focus,
+      title: "Specificity",
+      description: "We don't do generic frameworks. Every recommendation is built around your specific market, your specific situation, and your specific constraints."
     },
     {
-      icon: Globe,
-      title: "Global Perspective",
-      description: "Our international experience helps businesses navigate global markets with confidence."
+      icon: CheckCircle,
+      title: "Accountability",
+      description: "We measure ourselves against the outcome you hired us for — not the hours we logged or the slides we produced."
     }
   ];
 
@@ -38,11 +38,11 @@ const About = () => {
       <section className="relative py-24 bg-[#faebd7]">
         <div className="max-w-4xl mx-auto text-center text-[#1C3049] px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-bold text-[#1C3049] mb-6">
-            About <span className="">Taniv</span>
+            About Taniv Group
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
           <p className="text-xl text-business-light opacity-90 leading-relaxed">
-            Empowering businesses to reach their full potential through strategic consulting and innovative solutions
+            A boutique advisory firm built on 35 years of on-the-ground industry experience — rooted in Gujarat, working globally.
           </p>
         </div>
       </section>
@@ -55,17 +55,13 @@ const About = () => {
               <h2 className="text-4xl font-bold text-business-navy mb-6">Our Story</h2>
               <div className="w-16 h-0.5 bg-business-blue mb-6"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded with a vision to transform the business landscape, Taniv has been at the forefront of 
-                providing comprehensive consulting services that drive growth and innovation.
+                Taniv Group was founded in Gujarat — the heart of India's pharmaceutical and manufacturing ecosystem — by advisors who spent decades inside the industries they now consult for.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our journey began with a simple belief: every business has untapped potential waiting to be unleashed. 
-                Through strategic planning, expert guidance, and innovative solutions, we help organizations overcome 
-                challenges and achieve sustainable success.
+                We've sat on both sides of the table: structuring BD deals, managing cross-border market entries, advising on acquisitions, and building commercial strategies from the ground up. That experience is what we bring to every client engagement.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Today, we stand as a trusted partner to businesses across various industries, from startups to 
-                established enterprises, helping them navigate complex markets and achieve their ambitious goals.
+                We work with pharma companies, manufacturers, founders, and business owners — people making high-stakes decisions who need a senior thinking partner, not a junior team with a methodology deck. Every Taniv engagement is led by a principal with real skin in the game.
               </p>
             </div>
             <div className="lg:pl-12">
@@ -90,12 +86,10 @@ const About = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Target className="h-12 w-12 text-business-blue mr-4" />
-                  <h3 className="text-3xl font-bold text-business-navy">Our Mission</h3>
+                  <h3 className="text-3xl font-bold text-business-navy">Our mission</h3>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  To empower businesses with strategic insights, innovative solutions, and expert guidance that 
-                  enables them to overcome challenges, seize opportunities, and achieve sustainable growth in an 
-                  ever-evolving marketplace.
+                  To give founders, business owners, and executives access to the kind of senior strategic thinking that was previously only available inside large corporations or expensive global consulting firms — delivered with the speed and directness of a boutique.
                 </p>
               </CardContent>
             </Card>
@@ -104,12 +98,10 @@ const About = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Eye className="h-12 w-12 text-business-blue mr-4" />
-                  <h3 className="text-3xl font-bold text-business-navy">Our Vision</h3>
+                  <h3 className="text-3xl font-bold text-business-navy">Our vision</h3>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  To be the global leader in business consulting, recognized for our ability to transform 
-                  organizations and create lasting value through innovative strategies, exceptional service, 
-                  and unwavering commitment to client success.
+                  To be the most trusted advisory partner for pharma companies and ambitious businesses operating between India and the world — known not for the size of our team, but for the quality of our judgment.
                 </p>
               </CardContent>
             </Card>
@@ -144,26 +136,26 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20   bg-[#faebd7] text-[#1C3049]">
+      {/* What makes us different */}
+      <section className="py-20 bg-[#faebd7] text-[#1C3049]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold   mb-6">Why Choose Taniv?</h2>
+          <h2 className="text-4xl font-bold mb-6">What makes us different</h2>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8  ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <Award className="h-12 w-12 mx-auto mb-4 " />
-              <h3 className="text-xl font-bold mb-4">Proven Expertise</h3>
-              <p className="opacity-90">Years of experience delivering successful outcomes across diverse industries</p>
+              <UserCheck className="h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-4">You work with the expert, not a team below them</h3>
+              <p className="opacity-90">In most consulting firms, a senior partner sells the engagement and a junior team delivers it. At Taniv, the advisor you speak to is the advisor who does the work.</p>
             </div>
             <div>
-              <Users className="h-12 w-12 mx-auto mb-4 " />
-              <h3 className="text-xl font-bold mb-4">Client-Centric Approach</h3>
-              <p className="opacity-90">Tailored solutions that address your unique challenges and objectives</p>
+              <MapPin className="h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-4">We know Gujarat's pharma and manufacturing ecosystem from the inside</h3>
+              <p className="opacity-90">35 years in the industry means we know the players, the regulators, the distributors, and the deal dynamics — not from research, but from experience.</p>
             </div>
             <div>
-              <TrendingUp className="h-12 w-12 mx-auto mb-4 " />
-              <h3 className="text-xl font-bold mb-4">Measurable Results</h3>
-              <p className="opacity-90">Data-driven strategies that deliver tangible business improvements</p>
+              <Globe className="h-12 w-12 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-4">We work remotely with anyone, anywhere</h3>
+              <p className="opacity-90">We're based in Gandhinagar but have advised clients across India, the Middle East, Europe, and beyond. Geography has never been a constraint.</p>
             </div>
           </div>
         </div>
