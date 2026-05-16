@@ -6,84 +6,49 @@ import { Link } from "react-router-dom";
 const Pricing = () => {
   const plans = [
     {
-      name: "Startup",
-      price: "Contact Us",
-      period: "Project Based",
-      description: "Perfect for emerging businesses and startups looking to establish their foundation",
+      title: "Project engagement",
+      subtitle: "One focused problem. One senior advisor. A defined scope and outcome.",
+      pricing: "Project-based — scoped per engagement",
       features: [
-        "Business Strategy Consultation",
-        "Market Research & Analysis",
-        "Basic Project Management",
-        "Email Support",
-        "Quarterly Reviews",
-        "Documentation & Reports"
+        "A defined scope agreed upfront",
+        "Senior-led from day one",
+        "Market research, strategy, or advisory — based on your need",
+        "Written deliverables and recommendations",
+        "Best for: one-off decisions, market entry research, transaction prep"
       ],
       isPopular: false,
-      buttonText: "Get Started",
+      buttonText: "Tell us what you need →",
       buttonVariant: "outline" as const
     },
     {
-      name: "Growth",
-      price: "Contact Us",
-      period: "Monthly Retainer",
-      description: "Ideal for growing companies ready to scale their operations and expand market reach",
+      title: "Retained advisory",
+      subtitle: "Ongoing senior support for founders and CEOs who need a thinking partner, not a one-time report.",
+      pricing: "Monthly retainer — scope agreed upfront",
       features: [
-        "Everything in Startup",
-        "Advanced Business Development",
-        "M&A Advisory Services",
-        "Export/Import Consulting",
-        "Dedicated Account Manager",
-        "Priority Support",
-        "Monthly Strategy Sessions",
-        "Custom Training Programs"
+        "Dedicated senior advisor on call",
+        "Monthly strategy sessions",
+        "Covers pharma BD, M&A, market entry, or business development",
+        "Priority response and direct access",
+        "Best for: founders scaling, manufacturers expanding, CEOs navigating a transition"
       ],
       isPopular: true,
-      buttonText: "Most Popular",
+      buttonText: "Book a free intro call →",
       buttonVariant: "default" as const
     },
     {
-      name: "Enterprise",
-      price: "Contact Us",
-      period: "Custom Package",
-      description: "Comprehensive solutions for established enterprises with complex business needs",
+      title: "Full partnership",
+      subtitle: "For complex, multi-workstream engagements where you need a senior team embedded in the process.",
+      pricing: "Custom — let's scope it together",
       features: [
-        "Everything in Growth",
-        "Full Technical Services",
-        "System Development",
-        "Corporate Services",
-        "HR Strategy & Implementation",
-        "24/7 Priority Support",
-        "Weekly Strategy Calls",
-        "Custom Solution Development",
-        "Multi-location Support",
-        "Dedicated Project Team"
+        "Multi-workstream coverage across pharma, M&A, BD, and market entry",
+        "Senior team involvement throughout",
+        "Weekly strategy calls and hands-on execution support",
+        "Full documentation, reporting, and governance",
+        "Best for: large transactions, international expansions, full business transformations"
       ],
       isPopular: false,
-      buttonText: "Contact Sales",
+      buttonText: "Contact us directly →",
       buttonVariant: "outline" as const
-    }
-  ];
-
-  const addOns = [
-    {
-      title: "Technical Audit",
-      description: "Comprehensive technical assessment and optimization recommendations",
-      price: "Contact for Quote"
-    },
-    {
-      title: "Training Programs",
-      description: "Custom training modules for your team and leadership development",
-      price: "Contact for Quote"
-    },
-    {
-      title: "Market Entry Strategy",
-      description: "Detailed strategy for entering new markets or launching new products",
-      price: "Contact for Quote"
-    },
-    {
-      title: "System Integration",
-      description: "Complete system integration and digital transformation services",
-      price: "Contact for Quote"
     }
   ];
 
@@ -93,11 +58,11 @@ const Pricing = () => {
       <section className="relative py-24 bg-[#faebd7]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 text-[#1C3049]">
           <h1 className="text-5xl md:text-6xl font-bold  mb-6">
-            Pricing <span className="">Plans</span>
+            How we work with you
           </h1>
           <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
           <p className="text-xl  opacity-90 leading-relaxed">
-            Flexible pricing options tailored to your business needs and growth stage
+            We don't sell packages — we scope every engagement around your specific situation. Here's how most clients start.
           </p>
         </div>
       </section>
@@ -107,8 +72,8 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative shadow-card hover:shadow-elegant transition-all duration-300 ${
                   plan.isPopular ? 'ring-2 ring-business-blue scale-105' : ''
                 }`}
@@ -121,37 +86,35 @@ const Pricing = () => {
                     </div>
                   </div>
                 )}
-                
+
                 <CardHeader className="text-center pb-8 pt-8">
-                  <h3 className="text-2xl font-bold text-business-navy mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-business-navy mb-2">{plan.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4 px-2">{plan.subtitle}</p>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-business-blue">{plan.price}</span>
-                    <span className="text-gray-600 ml-2">/ {plan.period}</span>
+                    <span className="text-lg font-semibold text-business-blue">{plan.pricing}</span>
                   </div>
-                  <p className="text-gray-600">{plan.description}</p>
                 </CardHeader>
-                
+
                 <CardContent className="px-8 pb-8">
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <Check className="h-5 w-5 text-business-blue mr-3 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
+                      <li key={featureIndex} className="flex items-start">
+                        <Check className="h-5 w-5 text-business-blue mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link to="/contact">
-                    <Button 
+                    <Button
                       variant={plan.buttonVariant}
                       className={`w-full py-6 text-lg font-semibold ${
-                        plan.buttonVariant === 'default' 
-                          ? 'bg-business-blue hover:bg-business-blue/90 text-business-text-light' 
+                        plan.buttonVariant === 'default'
+                          ? 'bg-business-blue hover:bg-business-blue/90 text-business-text-light'
                           : 'border-business-blue text-business-blue hover:bg-business-blue hover:text-white'
                       }`}
                     >
                       {plan.buttonText}
-                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </Link>
                 </CardContent>
@@ -161,35 +124,23 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Add-ons Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-business-navy mb-4">Additional Services</h2>
-            <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Enhance your package with specialized add-on services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {addOns.map((addon, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-business-navy mb-3">{addon.title}</h3>
-                  <p className="text-gray-600 mb-4">{addon.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-semibold text-business-blue">{addon.price}</span>
-                    <Link to="/contact">
-                      <Button variant="outline" size="sm" className="border-business-blue text-business-blue hover:bg-business-blue hover:text-white">
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      {/* Not sure where to start? */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-business-navy mb-4">
+            Not sure where to start?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            Most clients begin with a single conversation. We'll listen to your situation and tell you honestly what level of engagement makes sense — and what it would cost. No templates, no pressure.
+          </p>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              className="bg-business-blue hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold"
+            >
+              Book a free 30-minute call →
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -241,8 +192,8 @@ const Pricing = () => {
             Let's discuss the perfect plan for your business needs
           </p>
           <Link to="/contact">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-[#1c3049] hover:bg-[#1c3049]/85 text-business-text-light px-8 py-6 text-lg font-semibold"
             >
               Schedule Consultation
