@@ -19,7 +19,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-[#1C3049] backdrop-blur-sm fixed w-full z-50 shadow-elegant">
+    <nav className="bg-business-navy/95 backdrop-blur-md fixed w-full z-50 border-b border-business-light-blue/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -39,7 +39,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className={`px-4 py-2 rounded-md text-md font-medium transition-all duration-300 font-crimson ${
+                  className={`px-4 py-2 rounded-sm text-sm font-medium transition-all duration-300 tracking-wide ${
                     isActive(item.path)
                       ? "bg-white/20 text-white font-semibold backdrop-blur-sm"
                       : "text-white/90 hover:bg-white/15 hover:text-white hover:font-semibold"
@@ -57,7 +57,8 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:bg-white/15 hover:text-white transition-all duration-300"
+              className="text-business-text-light hover:bg-business-light-blue/15 hover:text-business-text-light transition-all duration-300"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -67,7 +68,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-business-dark rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-business-dark rounded-sm mt-2 border border-business-light-blue/20">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -76,7 +77,7 @@ const Navigation = () => {
                     setIsOpen(false);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className={`block px-4 py-3 rounded-md text-base font-medium transition-all duration-300 font-crimson ${
+                  className={`block px-4 py-3 rounded-sm text-base font-medium transition-all duration-300 ${
                     isActive(item.path)
                       ? "bg-white/20 text-white font-semibold"
                       : "text-white/90 hover:bg-white/15 hover:text-white hover:font-semibold"
