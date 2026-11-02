@@ -8,3 +8,4 @@
 - [ ] Add a simple minimalist watercolor illustration of a 60+ year-old man to About.
 - [ ] Keep the home watercolor artwork anchored to the right side.
 - [ ] Verify all pages on desktop and mobile.
+- [ ] Apply the uploaded Home copy and grouped Services structure, including anchor navigation and service-prefilled contact links.
