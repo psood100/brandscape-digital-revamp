@@ -1,3 +1,6 @@
+import { useSearchParams } from "react-router-dom";
+import { serviceGroups } from "@/lib/service-groups";
+import EditorialHeader from "@/components/EditorialHeader";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,12 +9,13 @@ import { MessageCircle, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
-    service: "",
+    service: searchParams.get("service") || "",
     message: ""
   });
 
@@ -94,27 +98,17 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-[#faebd7]">
-        <div className="max-w-4xl mx-auto text-center text-[#1C3049] px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold  mb-6">
-            Contact <span className="">Us</span>
-          </h1>
-          <div className="w-24 h-0.5 bg-business-blue mx-auto mb-8"></div>
-          <p className="text-xl  opacity-90 leading-relaxed">
-            Better yet, see us in person! We love our customers, so feel free to visit anytime.
-          </p>
-        </div>
-      </section>
+      <EditorialHeader title="Contact Us" description="Better yet, see us in person! We love our customers, so feel free to visit anytime." label="Start a conversation" />
 
       {/* Contact Form and Info */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-secondary/45">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="shadow-card">
+            <Card className="shadow-none border-border">
               <CardHeader>
-                <h2 className="text-3xl font-bold text-business-navy">Get In Touch</h2>
-                <p className="text-gray-600">
+                <h2 className="text-3xl font-normal text-business-navy">Get In Touch</h2>
+                <p className="text-muted-foreground">
                   Ready to transform your business? Let's start the conversation.
                 </p>
               </CardHeader>
@@ -122,7 +116,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                         Full Name *
                       </label>
                       <Input
@@ -133,11 +127,11 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Your full name"
-                        className="border-gray-300 focus:border-business-blue focus:ring-business-blue"
+                        className="border-input focus:border-business-blue focus:ring-business-blue"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                         Email Address *
                       </label>
                       <Input
@@ -148,14 +142,14 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
-                        className="border-gray-300 focus:border-business-blue focus:ring-business-blue"
+                        className="border-input focus:border-business-blue focus:ring-business-blue"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                         Phone Number
                       </label>
                       <Input
@@ -165,11 +159,11 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+91 12345 67890"
-                        className="border-gray-300 focus:border-business-blue focus:ring-business-blue"
+                        className="border-input focus:border-business-blue focus:ring-business-blue"
                       />
                     </div>
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
                         Company Name
                       </label>
                       <Input
@@ -179,13 +173,13 @@ const Contact = () => {
                         value={formData.company}
                         onChange={handleInputChange}
                         placeholder="Your company name"
-                        className="border-gray-300 focus:border-business-blue focus:ring-business-blue"
+                        className="border-input focus:border-business-blue focus:ring-business-blue"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
                       Service Interest
                     </label>
                     <select
@@ -193,25 +187,21 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-business-blue focus:border-business-blue"
+                      className="w-full bg-background text-foreground px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-business-blue focus:border-business-blue"
                     >
                       <option value="">Select a service</option>
-                      <option value="projects">Projects</option>
-                      <option value="mergers">Mergers & Acquisitions</option>
-                      <option value="export-import">Export & Import</option>
-                      <option value="technical">Technical Services</option>
-                      <option value="business-dev">Business Development</option>
-                      <option value="market-research">Market Research</option>
-                      <option value="hr">HR Practices</option>
-                      <option value="corporate">Corporate Services</option>
-                      <option value="system-dev">System Development</option>
-                      <option value="training">Training</option>
-                      <option value="other">Other</option>
+                      {serviceGroups.flatMap((group) => group.services).map((service) => (
+                        <option key={service.title} value={service.title}>{service.title}</option>
+                      ))}
+                      {formData.service && !serviceGroups.some((group) => group.services.some((service) => service.title === formData.service)) && (
+                        <option value={formData.service}>{formData.service}</option>
+                      )}
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                       Message *
                     </label>
                     <Textarea
@@ -222,13 +212,13 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Tell us about your project or requirements..."
-                      className="border-gray-300 focus:border-business-blue focus:ring-business-blue"
+                      className="border-input focus:border-business-blue focus:ring-business-blue"
                     />
                   </div>
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-business-blue hover:bg-business-blue/90 text-business-text-light py-6 text-lg font-semibold"
+                    className="rounded-sm w-full bg-business-blue hover:bg-business-blue/90 text-business-text-light py-6 text-lg font-semibold"
                   >
                     Send Message
                     <Send className="ml-2 h-5 w-5" />
@@ -241,17 +231,17 @@ const Contact = () => {
             <div className="space-y-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="shadow-card hover:shadow-elegant transition-shadow duration-300">
+                  <Card key={index} className="shadow-none border-border hover:border-business-blue transition-shadow duration-300">
                     <CardContent className="p-6 text-center">
                       <div className="flex justify-center mb-4">
                         <info.icon className="h-12 w-12 text-business-blue" />
                       </div>
-                      <h3 className="text-lg font-bold text-business-navy mb-2">{info.title}</h3>
+                      <h3 className="text-lg font-normal text-business-navy mb-2">{info.title}</h3>
                       <p className="text-business-blue font-semibold mb-1">{info.content}</p>
-                      <p className="text-sm text-gray-600">{info.description}</p>
+                      <p className="text-sm text-muted-foreground">{info.description}</p>
                       {info.title === "WhatsApp" && (
                         <Button 
-                          className="mt-4 bg-green-600 hover:bg-green-700 text-white"
+                          className="rounded-sm mt-4 bg-business-navy hover:bg-business-blue text-business-text-light"
                           onClick={() => window.open("https://wa.me/917874555000", "_blank")}
                         >
                           <MessageCircle className="mr-2 h-4 w-4" />
@@ -264,17 +254,17 @@ const Contact = () => {
               </div>
 
               {/* Business Hours */}
-              <Card className="shadow-card">
+              <Card className="shadow-none border-border">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <Clock className="h-8 w-8 text-business-blue mr-3" />
-                    <h3 className="text-2xl font-bold text-business-navy">Business Hours</h3>
+                    <h3 className="text-2xl font-normal text-business-navy">Business Hours</h3>
                   </div>
                   <div className="space-y-3">
                     {businessHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">{schedule.day}</span>
-                        <span className={`text-sm ${schedule.hours === "Closed" ? "text-red-500" : "text-business-blue"}`}>
+                      <div key={index} className="flex justify-between items-center py-2 border-b border-border last:border-b-0">
+                        <span className="font-medium text-foreground">{schedule.day}</span>
+                        <span className={`text-sm ${schedule.hours === "Closed" ? "text-destructive" : "text-business-blue"}`}>
                           {schedule.hours}
                         </span>
                       </div>
@@ -288,9 +278,9 @@ const Contact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20   bg-[#faebd7] text-[#1C3049]">
+      <section className="py-20   bg-secondary/45 text-business-navy">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold   mb-6">
+          <h2 className="text-4xl font-normal   mb-6">
             Ready to Start Your Journey?
           </h2>
           <p className="text-xl   mb-8 opacity-90">
@@ -300,7 +290,7 @@ const Contact = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Button 
               size="lg" 
-              className="bg-[#1c3049] hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+              className="rounded-sm bg-business-navy hover:bg-business-blue/90 text-business-text-light px-8 py-6 text-lg font-semibold w-full sm:w-auto"
               onClick={() => window.open("https://wa.me/917874555000", "_blank")}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
@@ -309,7 +299,7 @@ const Contact = () => {
             <Button 
               variant="outline"
               size="lg" 
-              className="border-business-text-light text-business-text-light-lite hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
+              className="rounded-sm border-business-text-light text-business-navy hover:bg-business-text-light hover:text-business-navy px-8 py-6 text-lg font-semibold w-full sm:w-auto"
               onClick={() => window.open("tel:+917874555000", "_blank")}
             >
               <Phone className="mr-2 h-5 w-5" />

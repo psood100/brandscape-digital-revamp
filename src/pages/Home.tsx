@@ -8,23 +8,27 @@ const Home = () => {
   const services = [
     {
       title: "Pharma strategic advisory",
+      id: "pharma-advisory",
       description:
-        "Market entry, BD deals, licensing strategy, and distribution partnerships for pharma and life sciences companies — India and global."
+        "Business development, technical expertise and team training for pharma and life sciences companies, in India and globally."
     },
     {
       title: "M&A & business transactions",
+      id: "ma-transactions",
       description:
-        "Buy-side and sell-side advisory, business valuation, deal structuring, and succession planning for mid-market companies."
+        "Buy-side and sell-side deals, from first conversation to signed agreement, backed by corporate structuring and compliance."
     },
     {
       title: "Market entry & expansion",
+      id: "market-entry",
       description:
-        "Go-to-market strategy for companies entering India or expanding internationally — with deep Gujarat and cross-border expertise."
+        "Market surveys, export and import support, and project execution to take you into India or out to the world."
     },
     {
       title: "Fractional strategy partner",
+      id: "fractional-partner",
       description:
-        "On-call senior advisory for founders and CEOs who need a thinking partner without the cost of a full-time hire. Monthly retainer."
+        "Senior advice on call, plus the systems and HR practices that keep growth running. A monthly retainer instead of a full-time hire."
     }
   ];
 
@@ -39,32 +43,32 @@ const Home = () => {
     {
       title: "Pharma & life sciences companies",
       description:
-        "Entering new markets or structuring licensing and distribution deals."
+        "Entering new markets, licensing products or building distribution. We get you from approval to shelf."
     },
     {
       title: "Business owners and founders",
       description:
-        "Preparing for M&A, a sale, or their next stage of growth."
+        "Buying, selling or scaling. We run the deal and tidy the company behind it."
     },
     {
       title: "Manufacturers and exporters",
       description:
-        "Needing strategic guidance on cross-border expansion."
+        "Ready to sell beyond your borders. We find the markets, partners and paperwork."
     }
   ];
 
   return (
     <div className="min-h-screen">
-      <section className="relative min-h-[calc(100svh-7rem)] overflow-hidden bg-background border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 animate-fade-in">
+      <section className="relative  overflow-hidden bg-background border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid md:grid-cols-12 gap-6 lg:gap-10 items-center">
+          <div className="md:col-span-7 min-w-0 animate-fade-in">
             <div className="flex items-center gap-4 mb-8">
               <span className="w-12 h-px bg-accent" />
               <p className="text-xs uppercase tracking-[0.22em] font-semibold text-business-blue">
                 Strategic advisory · Gujarat to global
               </p>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal text-business-navy leading-[0.98] mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-business-navy leading-[0.98] mb-8">
               45 years of expertise.
               <br />
               <span className="italic text-business-blue">Zero guesswork.</span>
@@ -81,14 +85,14 @@ const Home = () => {
               </Button>
             </Link>
           </div>
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end animate-scale-in">
+          <div className="md:col-span-5 relative flex justify-end animate-scale-in">
             <div className="absolute inset-y-8 left-1/2 w-px bg-border" aria-hidden="true" />
             <img
               src={pharmaWatercolor}
               alt="Watercolor scientific illustration of pharmaceutical research and industry"
               width={1200}
               height={1408}
-              className="relative w-full max-w-md h-auto object-contain"
+              className="relative w-64 md:w-full max-w-md h-auto object-contain"
             />
           </div>
         </div>
@@ -119,6 +123,7 @@ const Home = () => {
               Who we work with
             </h2>
             <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground">Founders, manufacturers and CEOs who'd rather move than wait.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,8 +157,7 @@ const Home = () => {
             </h2>
             <div className="w-24 h-0.5 bg-business-blue mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive business solutions designed to drive growth and
-              success
+              Ten services. Four ways in. One partner since 1994.
             </p>
           </div>
 
@@ -171,6 +175,7 @@ const Home = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
+                  <Button asChild variant="link" className="mt-5 px-0 text-business-blue"><Link to={`/services#${service.id}`}>Read more <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
                 </CardContent>
               </Card>
             ))}
