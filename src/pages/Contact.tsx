@@ -64,12 +64,18 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       content: "+91 7874 555 000",
-      description: "Mon - Sat: 10:30 AM - 10:30 PM"
+      description: "Mon - Fri: 10:30 AM - 6:00 PM"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "ceo@tanivgroup.com",
+      content: (
+        <>
+          ceo@tanivgroup.com
+          <br />
+          himanshu@tanivgroup.com
+        </>
+      ),
       description: "We'll respond within 24 hours"
     },
     {
@@ -87,11 +93,11 @@ const Contact = () => {
   ];
 
   const businessHours = [
-    { day: "Monday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Tuesday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Wednesday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Thursday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Friday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Monday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Tuesday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Wednesday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Thursday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Friday", hours: "10:30 AM - 6:00 PM" },
     { day: "Saturday",hours:"Closed"},
     { day: "Sunday", hours:"Closed"  }
   ];
