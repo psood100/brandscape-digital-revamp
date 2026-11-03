@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import EditorialHeader from "@/components/EditorialHeader";
+import BannerHero from "@/components/BannerHero";
+import servicesHero from "@/assets/services-hero-watercolor.jpg";
 import { serviceGroups, serviceContactPath } from "@/lib/service-groups";
 
 const Services = () => {
@@ -24,15 +25,17 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
-      <EditorialHeader
+      <BannerHero
         title="Ten services. Zero fluff."
         description="Since 1994. One million+ man-hours of commercial and technical expertise."
         label="Our capabilities"
+        image={servicesHero}
+        imageAlt="Watercolor world map with India highlighted in navy and gold dashed trade routes connecting the world"
       >
         <Button asChild className="rounded-sm bg-business-navy text-business-text-light hover:bg-business-blue">
           <Link to="/contact">Book a Consultation</Link>
         </Button>
-      </EditorialHeader>
+      </BannerHero>
 
       <nav aria-label="Service groups" className="sticky top-16 z-30 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4">

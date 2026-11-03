@@ -96,6 +96,10 @@ const Footer = () => {
                 <Mail className="h-4 w-4 mr-2 text-business-blue" />
                 <span className="text-gray-300">ceo@tanivgroup.com</span>
               </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-business-blue" />
+                <span className="text-gray-300">himanshu@tanivgroup.com</span>
+              </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-business-blue flex-shrink-0" />
                 <span className="text-gray-300">Gandhinagar, Gujarat, India</span>
@@ -104,7 +108,7 @@ const Footer = () => {
             
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Business Hours</h4>
-              <p className="text-sm text-gray-300">Mon - Fri: 10:00 AM - 05:30 PM <br/>( Appointment Only )</p>
+              <p className="text-sm text-gray-300">Mon - Fri: 10:30 AM - 6:00 PM <br/>( Appointment Only )</p>
             </div>
           </div>
         </div>

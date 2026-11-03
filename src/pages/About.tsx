@@ -8,7 +8,7 @@ const About = () => {
     {
       icon: UserCheck,
       title: "Seniority",
-      description: "Every engagement is led by a principal with 35+ years of hands-on experience. We don't delegate your work to graduates."
+      description: "Every engagement is led by a principal with 45+ years of hands-on experience. We don't delegate your work to graduates."
     },
     {
       icon: MessageSquare,
@@ -37,7 +37,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="About Taniv Group" description="A boutique advisory firm built on 35 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={seniorPortrait} imageAlt="Minimal watercolor illustration of a senior advisor aged over 60" />
+      <EditorialHeader title="About Taniv Group" description="A boutique advisory firm built on 45 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={seniorPortrait} imageAlt="Minimal watercolor illustration of a senior advisor aged over 60" />
 
       {/* Our Story */}
       <section className="py-20 bg-background">
@@ -128,6 +128,39 @@ const About = () => {
         </div>
       </section>
 
+      {/* How we work — principles carried over from our people */}
+      <section className="py-16 bg-background border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-normal text-business-navy mb-4">How we work</h2>
+          <div className="w-16 h-0.5 bg-business-blue mb-10"></div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Collaborative excellence",
+                description: "We believe in the power of teamwork and collective expertise to deliver exceptional results."
+              },
+              {
+                title: "Continuous learning",
+                description: "We are committed to staying at the forefront of industry trends and best practices."
+              },
+              {
+                title: "Client success focus",
+                description: "Everyone here is dedicated to ensuring our clients achieve their business objectives."
+              },
+              {
+                title: "Innovation mindset",
+                description: "We embrace new ideas and innovative approaches to solve complex business challenges."
+              }
+            ].map((principle, index) => (
+              <div key={index} className="border-t border-border pt-6">
+                <h3 className="text-lg font-normal text-business-navy mb-3">{principle.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{principle.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* What makes us different */}
       <section className="py-20 bg-secondary/45 text-business-navy">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -142,7 +175,7 @@ const About = () => {
             <div>
               <MapPin className="h-12 w-12 mx-auto mb-4" />
               <h3 className="text-xl font-normal mb-4">We know Gujarat's pharma and manufacturing ecosystem from the inside</h3>
-              <p className="opacity-90">35 years in the industry means we know the players, the regulators, the distributors, and the deal dynamics — not from research, but from experience.</p>
+              <p className="opacity-90">45 years in the industry means we know the players, the regulators, the distributors, and the deal dynamics — not from research, but from experience.</p>
             </div>
             <div>
               <Globe className="h-12 w-12 mx-auto mb-4" />

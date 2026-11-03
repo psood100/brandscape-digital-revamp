@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { serviceGroups } from "@/lib/service-groups";
-import EditorialHeader from "@/components/EditorialHeader";
+import BannerHero from "@/components/BannerHero";
+import contactHero from "@/assets/contact-hero-watercolor.jpg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -63,12 +64,18 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       content: "+91 7874 555 000",
-      description: "Mon - Sat: 10:30 AM - 10:30 PM"
+      description: "Mon - Fri: 10:30 AM - 6:00 PM"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "ceo@tanivgroup.com",
+      content: (
+        <>
+          ceo@tanivgroup.com
+          <br />
+          himanshu@tanivgroup.com
+        </>
+      ),
       description: "We'll respond within 24 hours"
     },
     {
@@ -86,11 +93,11 @@ const Contact = () => {
   ];
 
   const businessHours = [
-    { day: "Monday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Tuesday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Wednesday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Thursday", hours: "10:30 AM - 05:30 PM" },
-    { day: "Friday", hours: "10:30 AM - 05:30 PM" },
+    { day: "Monday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Tuesday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Wednesday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Thursday", hours: "10:30 AM - 6:00 PM" },
+    { day: "Friday", hours: "10:30 AM - 6:00 PM" },
     { day: "Saturday",hours:"Closed"},
     { day: "Sunday", hours:"Closed"  }
   ];
@@ -98,7 +105,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="Contact Us" description="Better yet, see us in person! We love our customers, so feel free to visit anytime." label="Start a conversation" />
+      <BannerHero title="Contact Us" description="Better yet, see us in person! We love our customers, so feel free to visit anytime." label="Start a conversation" image={contactHero} imageAlt="Watercolor still life of a desk with a fountain pen, chai and open notebook by a window overlooking a city skyline at golden hour" />
 
       {/* Contact Form and Info */}
       <section className="py-20 bg-secondary/45">

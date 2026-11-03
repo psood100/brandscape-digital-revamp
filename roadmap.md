@@ -9,3 +9,8 @@
 - [x] Keep the home watercolor artwork anchored to the right side.
 - [x] Verify all pages on desktop and mobile.
 - [x] Apply the uploaded Home copy and grouped Services structure, including anchor navigation and service-prefilled contact links.
+- [x] Update About to 45 years, remove the Team page and fold its values into About.
+- [x] Change business hours everywhere to 10:30 AM - 6:00 PM.
+- [x] Add himanshu@tanivgroup.com under ceo@tanivgroup.com in footer and contact.
+- [x] Add unique watercolor hero banners to Services, Pricing and Contact with left text space.
+
