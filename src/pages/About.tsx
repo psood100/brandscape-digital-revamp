@@ -8,7 +8,7 @@ const About = () => {
     {
       icon: UserCheck,
       title: "Seniority",
-      description: "Every engagement is led by a principal with 35+ years of hands-on experience. We don't delegate your work to graduates."
+      description: "Every engagement is led by a principal with 45+ years of hands-on experience. We don't delegate your work to graduates."
     },
     {
       icon: MessageSquare,
@@ -37,7 +37,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="About Taniv Group" description="A boutique advisory firm built on 35 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={seniorPortrait} imageAlt="Minimal watercolor illustration of a senior advisor aged over 60" />
+      <EditorialHeader title="About Taniv Group" description="A boutique advisory firm built on 45 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={seniorPortrait} imageAlt="Minimal watercolor illustration of a senior advisor aged over 60" />
 
       {/* Our Story */}
       <section className="py-20 bg-background">
@@ -142,7 +142,7 @@ const About = () => {
             <div>
               <MapPin className="h-12 w-12 mx-auto mb-4" />
               <h3 className="text-xl font-normal mb-4">We know Gujarat's pharma and manufacturing ecosystem from the inside</h3>
-              <p className="opacity-90">35 years in the industry means we know the players, the regulators, the distributors, and the deal dynamics — not from research, but from experience.</p>
+              <p className="opacity-90">45 years in the industry means we know the players, the regulators, the distributors, and the deal dynamics — not from research, but from experience.</p>
             </div>
             <div>
               <Globe className="h-12 w-12 mx-auto mb-4" />
