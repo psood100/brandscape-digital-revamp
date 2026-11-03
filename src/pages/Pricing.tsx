@@ -1,4 +1,5 @@
-import EditorialHeader from "@/components/EditorialHeader";
+import BannerHero from "@/components/BannerHero";
+import pricingHero from "@/assets/pricing-hero-watercolor.jpg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Star, ArrowRight } from "lucide-react";
@@ -56,7 +57,7 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="How we work with you" description="We don't sell packages — we scope every engagement around your specific situation. Here's how most clients start." label="Engagements" />
+      <BannerHero title="How we work with you" description="We don't sell packages — we scope every engagement around your specific situation. Here's how most clients start." label="Engagements" image={pricingHero} imageAlt="Watercolor staircase of five steps rising toward gold light, a suited figure climbing" />
 
       {/* Pricing Cards */}
       <section className="py-20 bg-secondary/45">

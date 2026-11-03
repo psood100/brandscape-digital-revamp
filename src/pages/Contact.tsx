@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { serviceGroups } from "@/lib/service-groups";
-import EditorialHeader from "@/components/EditorialHeader";
+import BannerHero from "@/components/BannerHero";
+import contactHero from "@/assets/contact-hero-watercolor.jpg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -98,7 +99,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="Contact Us" description="Better yet, see us in person! We love our customers, so feel free to visit anytime." label="Start a conversation" />
+      <BannerHero title="Contact Us" description="Better yet, see us in person! We love our customers, so feel free to visit anytime." label="Start a conversation" image={contactHero} imageAlt="Watercolor still life of a desk with a fountain pen, chai and open notebook by a window overlooking a city skyline at golden hour" />
 
       {/* Contact Form and Info */}
       <section className="py-20 bg-secondary/45">
