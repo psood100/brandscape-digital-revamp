@@ -37,7 +37,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <EditorialHeader title="About Taniv Group" description="A boutique advisory firm built on 45 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={seniorPortrait} imageAlt="Minimal watercolor illustration of a senior advisor aged over 60" />
+      <BannerHero title="About Taniv Group" description="A boutique advisory firm built on 45 years of on-the-ground industry experience — rooted in Gujarat, working globally." label="Our story" image={aboutHero} imageAlt="Watercolor banyan tree with deep navy roots and a gold-lit canopy reaching toward the horizon, a small desk with an open notebook at its base" heightClass="h-[240px] md:h-[400px]" />
 
       {/* Our Story */}
       <section className="py-20 bg-background">
