@@ -1,5 +1,5 @@
-import seniorPortrait from "@/assets/senior-advisor-watercolor.png";
-import EditorialHeader from "@/components/EditorialHeader";
+import BannerHero from "@/components/BannerHero";
+import aboutHero from "@/assets/about-hero-watercolor.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Award, Users, TrendingUp, Globe, UserCheck, MessageSquare, Focus, CheckCircle, MapPin } from "lucide-react";
 
