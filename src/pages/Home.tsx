@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import BannerHero from "@/components/BannerHero";
 import { ArrowRight, ExternalLink, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import pharmaWatercolor from "@/assets/taniv-pharma-watercolor.png";
+import homeHero from "@/assets/home-hero-watercolor.jpg";
 
 const Home = () => {
   const services = [
@@ -59,44 +60,21 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="relative  overflow-hidden bg-background border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid md:grid-cols-12 gap-6 lg:gap-10 items-center">
-          <div className="md:col-span-7 min-w-0 animate-fade-in">
-            <div className="flex items-center gap-4 mb-8">
-              <span className="w-12 h-px bg-accent" />
-              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-business-blue">
-                Strategic advisory · Gujarat to global
-              </p>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-business-navy leading-[0.98] mb-8">
-              45 years of expertise.
-              <br />
-              <span className="italic text-business-blue">Zero guesswork.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-              Taniv Group is a senior advisory firm for pharma companies,
-              manufacturers, and business owners navigating market entry, M&amp;A,
-              and growth — from Gujarat, for the world.
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="rounded-sm bg-business-navy text-business-text-light hover:bg-business-blue px-7 py-6 text-base">
-                Book a free 30-minute strategy call
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-          <div className="md:col-span-5 relative flex justify-end animate-scale-in">
-            <div className="absolute inset-y-8 left-1/2 w-px bg-border" aria-hidden="true" />
-            <img
-              src={pharmaWatercolor}
-              alt="Watercolor scientific illustration of pharmaceutical research and industry"
-              width={1200}
-              height={1408}
-              className="relative w-64 md:w-full max-w-md h-auto object-contain"
-            />
-          </div>
-        </div>
-      </section>
+      <BannerHero
+        title={<>45 years of expertise.<br /><span className="italic text-business-blue">Zero guesswork.</span></>}
+        description="Taniv Group is a senior advisory firm for pharma companies, manufacturers, and business owners navigating market entry, M&A, and growth — from Gujarat, for the world."
+        label="Strategic advisory · Gujarat to global"
+        image={homeHero}
+        imageAlt="Watercolor sunrise over a calm sea with a winding gold path leading to a distant glowing city skyline, a small cargo ship and a subtle molecule motif in the sky"
+        heightClass="h-[240px] md:h-[480px]"
+      >
+        <Link to="/contact">
+          <Button size="lg" className="rounded-sm bg-business-navy text-business-text-light hover:bg-business-blue px-7 py-6 text-base">
+            Book a free 30-minute strategy call
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      </BannerHero>
 
       {/* Stats Section */}
       <section className="py-12 bg-business-navy text-business-text-light">
