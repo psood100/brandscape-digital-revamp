@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import BannerHero from "@/components/BannerHero";
 import { ArrowRight, ExternalLink, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import pharmaWatercolor from "@/assets/taniv-pharma-watercolor.png";
+import homeHero from "@/assets/home-hero-watercolor.jpg";
 
 const Home = () => {
   const services = [
